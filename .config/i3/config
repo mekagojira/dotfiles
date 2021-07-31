@@ -1,4 +1,4 @@
-font pango:monospace 8
+font pango:Dank Mono 8
 #font pango:DejaVu Sans Mono 8
 set $mod Mod4
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -35,7 +35,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Dank Mono'
 # A more modern dmenu replacement is rofi:
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -193,3 +193,9 @@ bindsym Shift+Print exec flameshot gui -c -p /home/hihu/Documents/screenshot
 
 # firefox
 bindsym $mod+Shift+w exec firefox
+
+bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+
