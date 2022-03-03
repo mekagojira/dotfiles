@@ -1,25 +1,18 @@
-export ZSH="/home/hihu/.oh-my-zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+ 
+export ZSH="$HOME/.oh-my-zsh"
+ 
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-ZSH_THEME="norm"
-
-plugins=(
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+ 
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# autojump
-[[ -s /home/hihu/.autojump/etc/profile.d/autojump.sh ]] && source /home/hihu/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
-
-# User configuration
-
+alias code="codium"
 alias szsh="source ~/.zshrc"
 alias czsh="code ~/.zshrc"
 alias vzsh="vim ~/.zshrc"
@@ -75,3 +68,4 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
