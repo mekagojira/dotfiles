@@ -6,7 +6,14 @@ export ZSH="$HOME/.oh-my-zsh"
  
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git)
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  git-auto-fetch
+  tmux
+  autojump
+)
 
 source $ZSH/oh-my-zsh.sh
  
@@ -33,15 +40,15 @@ alias deploy="yarn server:dev"
 
 alias c="code"
 
-alias emddi="/home/hihu/dev/emddi"
-alias hihu="/home/hihu/dev/hihu"
-alias livi="/home/hihu/dev/livi"
+alias emddi="~/dev/emddi"
+alias hihu="~/dev/hihu"
+alias livi="~/dev/livi"
 
-alias emddidir="cd /home/hihu/dev/emddi && ls"
-alias emddibe="cd /home/hihu/dev/emddi/be && ls"
+alias emddidir="cd ~/dev/emddi && ls"
+alias emddibe="cd ~/dev/emddi/be && ls"
 
-alias hihudir="cd /home/hihu/dev/hihu && ls"
-alias lividir="cd /home/hihu/dev/livi && ls"
+alias hihudir="cd ~/dev/hihu && ls"
+alias lividir="cd ~/dev/livi && ls"
 
 alias c="code"
 alias c.="code ."
